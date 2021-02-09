@@ -1,0 +1,38 @@
+{
+    "name": "Userbot - Telegram Userbot based on pyrogram",
+    "description": "A modular Telegram Userbot based on pyrogram running on Python 3.9",
+    "logo": "https://telegra.ph/file/0549cdcecfadeab0dfd40.jpg",
+    "keywords": [
+        "telegram",
+        "userbot",
+        "plugin",
+        "modular",
+        "pyrogram",
+        "productivity",
+        "testing",
+        "AK HACKER userbot",
+        "mrrobot userbot",
+        "mrrobot telegram userbot"
+    ],
+    "repository": "https://github.com/AKHACKER-program4hack/mrrobot",
+    "stack": "container",
+    "env": {
+        "ENV": {
+            "description": "Fill this if you using environ variable as config.",
+            "value": "Yes"
+        },
+        "API_ID": {
+            "description": "Get from https://my.telegram.org",
+            "value": "Yes"
+        },
+        "API_HASH": {
+            "description": "Get from https://my.telegram.org",
+            "value": "Yes"
+        },
+        "USERBOT_SESSION": {
+            "description": "Generate String from Heroku Shell by running 'bash genStr' after you deploy, Set this value later after genrating the string if you dont have. Make sure you choose option 1 since you are here to use it for userbot :)",
+            "value": "Yes"
+        }
+    }
+}
+  
