@@ -20,7 +20,7 @@ async def send_all(client, message):
             except:
                 continue
     except Exception as error:
-        await client.send_message(message.chat['id'],reply_to_message_id=int(message.message_id),"sendall error : " + str(error))
+        await client.send_message(message.chat['id'],reply_to_message_id=int(message.message_id),text="sendall error : " + str(error))
 
 
 @UserBot.on_message(filters.me & filters.text & filters.command("getchats","."))
