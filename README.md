@@ -42,8 +42,9 @@ git clone https://github.com/AKHACKER-program4hack/mrrobot.git
 cd userbot
 python3 -m venv env
 source env/bin/activate
-pip install -r requirements.txt
-python -m userbot.
+pip3 install -r requirements.txt
+python3 sessioncreater.py
+python3 -m userbot.
 ```
 
 
