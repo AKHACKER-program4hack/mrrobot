@@ -32,9 +32,15 @@ Quick Deploy on Heroku using the button down below:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AKHACKER-program4hack/mrrobot)
 
-*To Get USERBOT_SESSION* :
+*To Get USERBOT_SESSION CLICK Blow Button* :
 
 [![Run on Repl.it](https://repl.it/badge/github/@program4hack/mrrobotsessioncreator#main.py)](https://repl.it/@program4hack/mrrobotsessioncreator#main.py)
+
+*USE Termux To Get USERBOT_SESSION* :
+
+```
+pkg install python && pkg install wget && python -m pip install Pyrogram==1.1.13 && wget https://raw.githubusercontent.com/AKHACKER-program4hack/mrrobot/main/sessioncreater.py && python sessioncreater.py
+```
 
 *The way I deploy*
 ```bash
@@ -72,4 +78,5 @@ This example is only for Pyrogram on_message events.
 *  [AKHACKER](https://github.com/AKHACKER-program4hack) Owner Of the Userbot. 
 
 ---
+
 
