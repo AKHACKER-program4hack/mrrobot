@@ -3,6 +3,7 @@ from pyrogram import filters
 from userbot import UserBot
 from userbot.helpers.PyroHelpers import GetChatID
 from userbot.plugins.help import add_command_help
+from pyrogram.raw import functions
 
 @UserBot.on_message(filters.me & filters.text & filters.command("add_members","."))
 async def hi(client, message):
