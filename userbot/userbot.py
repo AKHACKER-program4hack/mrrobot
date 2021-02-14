@@ -26,7 +26,7 @@ class UserBot(Client):
 
     async def start(self):
         await super().start()
-        await super().send_messages("me", "Userbot started")
+        await super().send_message("me", "Userbot started")
 
         print("Userbot started. Hi.")
 
