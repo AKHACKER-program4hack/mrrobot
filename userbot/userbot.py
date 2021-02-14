@@ -26,15 +26,7 @@ class UserBot(Client):
 
     async def start(self):
         await super().start()
-
-        restart_reply_details = super().search_messages("me", query="#userbot_restart")
-        async for x in restart_reply_details:
-            _, chat_id, message_id = x.text.split(", ")
-            await super().send_message(
-                chat_id=int(chat_id), reply_to_message_id=int(message_id), text="`Userbot Restarted!`"
-            )
-            await super().delete_messages("me", x.message_id)
-            break
+        await super().send_messages("me", "Userbot started")
 
         print("Userbot started. Hi.")
 
