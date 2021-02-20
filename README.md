@@ -27,7 +27,6 @@ or signed up for. You must do all. It is a cardinal sin if you don't.
 * `virtualenv` installed so that the packages don't interfere with other system packages.
 
 ## Installing
-*One Click Deploy*
 
 <details>
   <summary> Video Tutorial </summary>
