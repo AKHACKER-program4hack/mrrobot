@@ -1,7 +1,7 @@
 FROM sandy1709/catuserbot:alpine
 
 #clonning repo 
-RUN git clone https://github.com/AKHACKER-program4hack/mrrobot-fix.git /root/userbot
+RUN git clone https://github.com/AKHACKER-program4hack/mrrobot.git /root/userbot
 #working directory
 WORKDIR /root/userbot
 
