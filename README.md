@@ -1,7 +1,6 @@
 # MR.ROBOT Userbot
 ![Python Version](https://img.shields.io/badge/Python-v3.9-blue)
 [![Join Group](https://img.shields.io/badge/Telegram-Join%20Group-informational)](https://t.me/program4hack)
-[![HitCount](http://hits.dwyl.com/AKHACKER-program4hack/mrrobot.svg)](http://hits.dwyl.com/AKHACKER-program4hack/mrrobot)
 [![Contributors](https://img.shields.io/github/contributors/AKHACKER-program4hack/mrrobot)](https://github.com/AKHACKER-program4hack/mrrobot/graphs/contributors)
 ![Last Commit](https://img.shields.io/github/last-commit/AKHACKER-program4hack/mrrobot/main)
 ![Issues](https://img.shields.io/github/issues/AKHACKER-program4hack/mrrobot)
@@ -28,7 +27,7 @@ or signed up for. You must do all. It is a cardinal sin if you don't.
 
 ## Installing
 
-<details>
+<!-- <details>
   <summary> Video Tutorial </summary>
 
 ```
@@ -39,11 +38,16 @@ How To Deploy MR.Robot.
 <a href="https://youtu.be/ifkGhxhlV6Q"><img src="https://img.shields.io/badge/How%20To%20Deploy-blue.svg?logo=Youtube"></a>
 <a href="https://youtu.be/ifkGhxhlV6Q"><img src="https://img.shields.io/youtube/views/ifkGhxhlV6Q?style=social"></a>
 
-</details>
+</details> -->
 
-Quick Deploy on Heroku using the button down below:
+#### Quick Deploy on Heroku using the button down below:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AKHACKER-program4hack/mrrobot)
+
+#### Quick Deploy on Railway using the button down below:
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FAKHACKER-program4hack%2Fmrrobot&envs=API_ID%2CAPI_HASH%2CUSERBOT_SESSION&API_IDDesc=Get+from+https%3A%2F%2Fmy.telegram.org%2Fapps&API_HASHDesc=Get+from+https%3A%2F%2Fmy.telegram.org%2Fapps&USERBOT_SESSIONDesc=Get+it+from+https%3A%2F%2Freplit.com%2F%40program4hack%2Fmrrobotsessioncreator%23main.py&referralCode=w6Llh-)
+
 
 *To Get USERBOT_SESSION CLICK Blow Button* :
 
