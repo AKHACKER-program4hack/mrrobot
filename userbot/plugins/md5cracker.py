@@ -14,10 +14,7 @@ async def cracker(client, message):
         wordlistpath = cmd[2]
     except Exception as error:
         if "list index out of range" in str(error):
-            # For local development :
-            # wordlistpath = str(Client.WORKDIR) + "/plugins/wordlist/commonpasswordlist.txt"
-            # For Production level orignal
-            wordlistpath = str(Userbot.WORKDIR) + "/userbot/plugins/wordlist/commonpasswordlist.txt"
+            wordlistpath = "plugins/wordlist/commonpasswordlist.txt"
         else:
             d = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="Error : " + str(error))
     d = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="Cracking started...")
@@ -27,10 +24,12 @@ async def cracker(client, message):
             wordlist = requests.get(wordlistpath).content.decode("utf-8").split()
         else:
             try:
+                wordlistpath = "./userbot/" + wordlistpath
                 with open(wordlistpath,"r") as f:
                     wordlist = f.read().splitlines()
             except Exception as error:
-                await d.edit_text("Error : " + str(error))
+                e = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="Error : " + str(error))
+                # await d.edit_text("Error : " + str(error))
         countword = len(wordlist)
         try:
             for password in wordlist:
