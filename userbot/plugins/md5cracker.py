@@ -88,7 +88,7 @@ add_command_help(
         ],
         [
             ".md5hash",
-            "Make md5 hash of a word\nUsage: ``.md5hash password``",
+            "Make md5 hash of a word\nUsage: ``.md5hash <word>``",
         ],
     ],
 )
