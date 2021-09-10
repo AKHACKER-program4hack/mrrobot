@@ -38,9 +38,18 @@ async def cracker(client, message):
                 # print("tried : " + str(totaltries))
                 hashofpassword = hashlib.md5(password.encode("UTF-8")).hexdigest()
                 if hashtocrack == hashofpassword:
-                    await d.edit_text("cracked : `" + str(password) + "`")
-                    cracked = True
-                    break
+                    try:
+                        await d.edit_text("cracked : `" + str(password) + "`")
+                        cracked = True
+                        break
+                    except Exception as error:
+                        if "A wait of" in str(error):
+                            e = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="cracked : `" + str(password) + "`")
+                            cracked = True
+                            break
+                        else:
+                            e = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="Error : " + str(error))
+                            break
                 else:
                     if tries == 50:
                         try:
@@ -108,9 +117,18 @@ async def cracker(client, message):
                 # print("tried : " + str(totaltries))
                 hashofpassword = hashlib.sha1(password.encode("UTF-8")).hexdigest()
                 if hashtocrack == hashofpassword:
-                    await d.edit_text("cracked : `" + str(password) + "`")
-                    cracked = True
-                    break
+                    try:
+                        await d.edit_text("cracked : `" + str(password) + "`")
+                        cracked = True
+                        break
+                    except Exception as error:
+                        if "A wait of" in str(error):
+                            e = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="cracked : `" + str(password) + "`")
+                            cracked = True
+                            break
+                        else:
+                            e = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="Error : " + str(error))
+                            break
                 else:
                     if tries == 50:
                         try:
@@ -176,9 +194,18 @@ async def cracker(client, message):
                 # print("tried : " + str(totaltries))
                 hashofpassword = hashlib.sha256(password.encode("UTF-8")).hexdigest()
                 if hashtocrack == hashofpassword:
-                    await d.edit_text("cracked : `" + str(password) + "`")
-                    cracked = True
-                    break
+                    try:
+                        await d.edit_text("cracked : `" + str(password) + "`")
+                        cracked = True
+                        break
+                    except Exception as error:
+                        if "A wait of" in str(error):
+                            e = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="cracked : `" + str(password) + "`")
+                            cracked = True
+                            break
+                        else:
+                            e = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="Error : " + str(error))
+                            break
                 elif password == wordlist[-1]:
                     await d.edit_text("End OF file NO password cracked")
                 else:
@@ -218,7 +245,7 @@ async def hasher(client, message):
     word = cmd[1]
     try:
         wordhash = hashlib.md5(word.encode("utf-8")).hexdigest()
-        d = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="hash of " + str(word) + " : `" + str(wordhash) + "`")
+        d = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="md5hash of " + str(word) + " : `" + str(wordhash) + "`")
     except Exception as error:
         d = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="Error : " + str(error))
      
@@ -228,7 +255,7 @@ async def hasher(client, message):
     word = cmd[1]
     try:
         wordhash = hashlib.sha1(word.encode("utf-8")).hexdigest()
-        d = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="hash of " + str(word) + " : `" + str(wordhash) + "`")
+        d = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="sha1hash of " + str(word) + " : `" + str(wordhash) + "`")
     except Exception as error:
         d = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="Error : " + str(error))
      
@@ -238,7 +265,7 @@ async def hasher(client, message):
     word = cmd[1]
     try:
         wordhash = hashlib.sha256(word.encode("utf-8")).hexdigest()
-        d = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="hash of " + str(word) + " : `" + str(wordhash) + "`")
+        d = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="sha256hash of " + str(word) + " : `" + str(wordhash) + "`")
     except Exception as error:
         d = await client.send_message(chat_id=message.chat["id"], reply_to_message_id=int(message.message_id), text="Error : " + str(error))
         
