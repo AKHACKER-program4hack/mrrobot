@@ -32,15 +32,15 @@ async def cracker(client, message):
                 # await d.edit_text("Error : " + str(error))
         countword = len(wordlist)
         try:
+            cracked = False
             for password in wordlist:
                 # print("in for looop")
                 # print("tried : " + str(totaltries))
                 hashofpassword = hashlib.md5(password.encode("UTF-8")).hexdigest()
                 if hashtocrack == hashofpassword:
                     await d.edit_text("cracked : " + str(password))
+                    cracked = True
                     break
-                elif password == wordlist[-1]:
-                    await d.edit_text("End OF file NO password cracked")
                 else:
                     if tries == 50:
                         try:
@@ -56,6 +56,11 @@ async def cracker(client, message):
                                 continue
                 tries += 1
                 totaltries += 1
+            try:
+                if not cracked:
+                    await d.edit_text("END of File all passwords are tried not Found")
+            except Exception as error:
+                print(error)
         except Exception as error:
             await d.edit_text("Error : " + str(error))
     except Exception as error:
