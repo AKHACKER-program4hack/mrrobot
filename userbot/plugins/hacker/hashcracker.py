@@ -69,7 +69,8 @@ async def cracker(client, message):
                 if not cracked:
                     await d.edit_text("END of File all passwords are tried not Found")
             except Exception as error:
-                print(error)
+                if "The message id is invalid" in str(error):
+                    e = await client.send_message(chat_id=d.chat["id"], reply_to_message_id=int(d.message_id), text="Cracking stopped...")
         except Exception as error:
             await d.edit_text("Error : " + str(error))
     except Exception as error:
